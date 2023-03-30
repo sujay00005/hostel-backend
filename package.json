@@ -1,0 +1,27 @@
+{
+  "name": "hostel-backend",
+  "version": "1.0.0",
+  "description": "Backend app for hostel management",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujay00005/hostel-backend.git"
+  },
+  "author": "Sujay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujay00005/hostel-backend/issues"
+  },
+  "homepage": "https://github.com/sujay00005/hostel-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  }
+}
