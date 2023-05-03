@@ -15,10 +15,10 @@ app.use(cors({origin:'*'}));
 //app.set('views', 'views');
 
 const studentRoute=require('./routes/studentRoute');
-//const staffRoute=require('./routes/staffRoute');
+const staffRoute=require('./routes/staffRoute');
 
 app.use(studentRoute);
-//app.use(staffRoute);
+app.use(staffRoute);
 
 mongoose
     .connect(
@@ -29,10 +29,10 @@ mongoose
         return result;
     })
     .then(result => {
-        app.listen(3000, () => {
+        app.listen(5000, () => {
             console.log(`
                 ******************************************************
-                  🔴🟡🟢  Server is running on port: 3000  🟢🟡🔴
+                  🔴🟡🟢  Server is running on port: 5000  🟢🟡🔴
                 ******************************************************
             `);
         });

@@ -4,11 +4,14 @@ const studentController=require('../controllers/studentController');
 
 const router=express.Router();
 
-router.post('/add-student', studentController.postAddStudent);
-
 router.get('/get-students', studentController.getStudents);
 
 router.get('/student/:studentId', studentController.getStudent);
 
+router.post('/add-student', studentController.postAddStudent);
+
+router.post('/update-student', studentController.updateStudent);
+
+router.post('/delete-student/:studentId', studentController.deleteStudent)
 
 module.exports=router;
