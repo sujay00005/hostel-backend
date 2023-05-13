@@ -17,19 +17,50 @@ exports.getStudent=(req, res, next) => {
 }
 
 exports.getStudents=(req, res, next) => {
-    Student.find()
-        .then(students => {
-            console.log(students);
-            return students;
-        })
-        .then(students => {
-            return res.json({
-                data: students
+    //console.log("🤗🙂🙂");
+    //console.log(req.query);
+    //console.log(res.paginatedResult);
+
+    //const requestQuery=req.query;
+    //console.log("😊😉");
+
+    //let query={};
+
+    //if(!requestQuery.name||!requestQuery.phone||!requestQuery.email)
+    //    query={};
+    //else if(requestQuery) {
+    //    query={
+    //        $or: [
+    //            {'name': {$regex: requestQuery.name, $options: 'i'}},
+    //            {'phone': {$regex: requestQuery.phone}},
+    //            {'email': {$regex: requestQuery.email, $options: 'i'}},
+    //        ]
+    //    }
+    //}
+
+    //if(requestQuery.name||requestQuery.phone||requestQuery.email)
+    //    query={};
+
+    //console.log(query);
+    //console.log(res);
+    return res.json({
+        data: res.paginatedResult
             }).status(200);
-        })
-        .catch(err => {
-            console.log(err);
-        });
+
+    //Student.find(query, {}, {skip: Number(requestQuery.skip), limit: Number(requestQuery.limit)})
+    //Student.find(query)
+    //    .then(students => {
+    //        //console.log(students);
+    //        return students;
+    //    })
+    //    .then(students => {
+    //        return res.json({
+    //            data: students
+    //        }).status(200);
+    //    })
+    //    .catch(err => {
+    //        console.log(err);
+    //    });
 }
 
 exports.postAddStudent=(req, res, next) => {

@@ -1,10 +1,12 @@
 const express=require('express');
 
 const staffController=require('../controllers/staffController');
+const {paginatedResult}=require('../util/pagination');
+const staff=require('../models/staff');
 
 const router=express.Router();
 
-router.get('/get-staffs', staffController.getStaffs);
+router.get('/get-staffs', paginatedResult(staff),staffController.getStaffs);
 
 router.get('/staff/:staffId', staffController.getStaff);
 

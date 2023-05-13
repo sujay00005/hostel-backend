@@ -15,17 +15,21 @@ exports.getStaff=(req, res, next) => {
 }
 
 exports.getStaffs=(req, res, next) => {
-    Staff.find()
-        .then((staffs) => {
-            console.log(staffs);
-            return staffs;
-        })
-        .then((staffs) => {
-            return res.json({
-                data: staffs
-            }).status(200);
-        })
-        .catch((err) => console.log(err));
+    //Staff.find()
+    //    .then((staffs) => {
+    //        console.log(staffs);
+    //        return staffs;
+    //    })
+    //    .then((staffs) => {
+    //        return res.json({
+    //            data: staffs
+    //        }).status(200);
+    //    })
+    //    .catch((err) => console.log(err));
+
+    return res.json({
+        data: res.paginatedResult
+    }).status(200);
 }
 
 exports.postAddStaff=(req, res, next) => {
